@@ -51,6 +51,12 @@ You may need to change the font or colors.
 In general, we use the following code to display the clock in conky:
 ${exec bash-fuzzy-clock}
 
+If you download zeit.conf, you need to start it with conky:
+In Terminal: 
+...
+conky -c ~/zeit.conf
+...
+
 On an Apple computer, you can use GeekTool to display the clock on your 
 screen, using a Shell Geeklet: see 
 <https://lifehacker.com/5834676/build-an-attractive-informative-mac-desktop-with-geektool>
