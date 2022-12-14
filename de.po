@@ -20,11 +20,11 @@ msgstr ""
 
 #: bash-fuzzy-clock:13
 msgid "nearly"
-msgstr "gleich"
+msgstr "nearly"
 
 #: bash-fuzzy-clock:14
 msgid "just after"
-msgstr "nach"
+msgstr "justafter"
 
 #: bash-fuzzy-clock:15
 msgid "o'clock"
@@ -125,7 +125,7 @@ msgstr "zwanzig nach"
 
 #: bash-fuzzy-clock:142
 msgid "twenty-five past"
-msgstr "fünfundzwanzig nach"
+msgstr "fünf vor halb"
 
 #: bash-fuzzy-clock:146
 msgid "twenty-five to"
