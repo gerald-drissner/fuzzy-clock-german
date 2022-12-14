@@ -1,53 +1,55 @@
-bashfuzzyclock
-==============
+fuzzy-clock-german
 
-bash-fuzzy-clock is a natural language or "fuzzy" clock script, written in Bash. Use it in Conky, Tint2 (Linux/BSD) or GeekTool (Mac) configurations as a desktop-agnostic fuzzy clock. Translated to six languages.
+This is a fork of bashfuzzyclock. It is an adaption to German. It is written in Bash. KDE offers a "umgangssprachliche Uhr" (fuzzy clock - clock in words), which Gnome does not have. But you can use Conky to produce the same effect. This Bash script also works with Conky, Tint2 (Linux/BSD) or GeekTool (Mac).
 
 INSTALL:
 ========
 
-If you're on Arch Linux you can install this from the AUR:
-
-<https://aur.archlinux.org/packages/bash-fuzzy-clock/>
-
-If not, from a terminal:
+In Linux, first download and unzip the compressed file. Then, in Terminal, use the following commands:
 
 ```
 $ tar xf bash-fuzzy-clock.tar.gz
 $ sudo install -v bash-fuzzy-clock.sh -m 0755 /usr/bin/bash-fuzzy-clock
 ```
 
-If you need a translation, make sure you 
-have `LANGUAGE` set in .bashrc (and for Conky, .xinitrc) or 
+Install the German translation:
+Notice: Make sure you have 'LANGUAGE' set in .bashrc (and for Conky, .xinitrc) or 
 /etc/locale.conf
 
 ```
-$ sudo msgfmt fr.po -o /usr/share/locale/fr/LC_MESSAGES/bash-fuzzy-clock.mo
 $ sudo msgfmt de.po -o /usr/share/locale/de/LC_MESSAGES/bash-fuzzy-clock.mo
-$ sudo msgfmt es.po -o /usr/share/locale/es/LC_MESSAGES/bash-fuzzy-clock.mo
-$ sudo msgfmt it.po -o /usr/share/locale/it/LC_MESSAGES/bash-fuzzy-clock.mo
-$ sudo msgfmt pt.po -o /usr/share/locale/pt_BR/LC_MESSAGES/bash-fuzzy-clock.mo
 ```
 
 USE
 ===
 
-Just invoke it:
+In Terminal, just type:
 
 ```
 $ bash-fuzzy-clock
---> nearly twenty past seven
+--> zwanzig nach zehn
 ```
 
 You can use the "m" option to display the general time of day:
 
 ```
 $ bash-fuzzy-clock m
---> morning 
+--> morgens 
 ```
-Using Conky, you can set the script to run every minute (or perhaps, if you just want, every five minutes). See <https://github.com/brndnmtthws/conky/wiki> for Conky's wiki.
+On Linux I use it with conky to show it on my desktop:
 
-Using Tint2, you use the executor panel item to run the script. See <https://gitlab.com/o9000/tint2/blob/master/doc/tint2.md#executor> for more details, or just use tint2conf.
+Note that in zeit.conf, you need to adjust the following lines:
+xinerama_head = 2,
+--> I use three screens, so here indicate the screen on which the clock should be displayed. IF you have only one screen, delete the line.
+
+Under ---Placement
+Adjust where you want to display the clock.
+
+At the very end:
+You may need to change the font or colors.
+
+In general, we use the following code to display the clock in conky:
+${exec bash-fuzzy-clock}
 
 On an Apple computer, you can use GeekTool to display the clock on your 
 screen, using a Shell Geeklet: see 
@@ -59,17 +61,3 @@ WHAT IS A FUZZY CLOCK?
 
 Fuzzy clocks display a generalisation of the time in informal or natural 
 language. They only give precise time on the hour and at five-minute intervals from the hour.
-
-WHY ANOTHER FUZZY CLOCK?
-========================
-
-
-There are a number of fuzzy clock implementations which
-
-1. don't work in any other language than English;
-2. are not fuzzy - they simply display the exact time in words; or
-3. require Python
-
-and at the time of first writing the script, I couldn't find a clock 
-that I liked. So I made one that only required Bash, was fuzzy, and was 
-(to the limits of my language knowledge) translatable.
