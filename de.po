@@ -1,16 +1,16 @@
 # Translation file
 # Copyright (C) 2014
 # This file is distributed under the same license as the bash-fuzzy-clock package.
-# Corey Mwamba <contact.me@coreymwamba.co.uk>, 2014
-#
-#, fuzzy
+# Corey Mwamba <contact.me@coreymwamba.co.uk>
+# Translation adjusted by Gerald Drissner
+
 msgid ""
 msgstr ""
 "Project-Id-Version: bash-fuzzy-clock\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-27 13:18+0000\n"
-"PO-Revision-Date: 2014-01-27 13:18+0000\n"
-"Last-Translator: Corey Mwamba\n"
+"PO-Revision-Date: 2022-12-14 13:18+0000\n"
+"Last-Translator: Gerald Drissner\n"
 "Language-Team: as above\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
