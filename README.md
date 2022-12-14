@@ -58,7 +58,7 @@ In Terminal:
 conky -c ~/zeit.conf
 ```
 RESULT:
-![Alt text](https://github.com/gerald-drissner/fuzzy-clock-german/blob/master/example_umgangssprachliche_uhr.png "Fuzzy Clock German)
+<img src="https://github.com/gerald-drissner/fuzzy-clock-german/blob/master/example_umgangssprachliche_uhr.png">
 
 On an Apple computer, you can use GeekTool to display the clock on your 
 screen, using a Shell Geeklet: see 
