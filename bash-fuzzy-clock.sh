@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # BASH fuzzyclock
 # by Corey Mwamba
+# adjusted to German language by Gerald Drissner
 #
 export TEXTDOMAINDIR="/usr/share/locale"
 export TEXTDOMAIN=bash-fuzzy-clock
@@ -19,8 +20,9 @@ fi
 # To my knowledge, there is no natural way to say 
 # "just after four", for example, in brazilian portuguese
 case $lng in
-    pt)
+    de)
         justaft=""
+        nearly=""
     ;;
     *)
         justaft=$"just after"
@@ -47,9 +49,8 @@ case "$1" in
         fi
         ;;
     *)
-        if [[ $min -gt 27 && $min -lt 33 ]]; then
-            adj=$"half past"
-            case "$lng" in
+        if [[ $min -ge 23 && $min -lt 33 ]]; then
+                      case "$lng" in
                 de)
                     hr=$((hr + 1))
                     if [[ $hr -eq 24 ]]; then
@@ -157,6 +158,10 @@ case "$1" in
         if [[ $min -ge 23 && $min -le 27 ]]; then
             adj=$"twenty-five past"
         fi
+        
+        if [[ $min -gt 27 && $min -lt 33 ]]; then
+            adj=$"half past"
+        fi
 
         if [[ $min -ge 33 && $min -le 37 ]]; then
             adj=$"twenty-five to"
@@ -214,3 +219,4 @@ case "$1" in
             esac
         fi
 esac
+
