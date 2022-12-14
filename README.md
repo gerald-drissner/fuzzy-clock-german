@@ -53,9 +53,10 @@ ${exec bash-fuzzy-clock}
 
 If you download zeit.conf, you need to start it with conky:
 In Terminal: 
-...
+
+```
 conky -c ~/zeit.conf
-...
+```
 
 On an Apple computer, you can use GeekTool to display the clock on your 
 screen, using a Shell Geeklet: see 
