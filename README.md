@@ -46,13 +46,13 @@ xinerama_head = 2,
 
 --> I use three screens, so here indicate the screen on which the clock should be displayed. IF you have only one screen, delete the line.
 
-*Under ---Placement*
+Under ---Placement
 --> Adjust where you want to display the clock.
 
-*At the very end:*
+At the very end:
 You may need to change the font or colors.
 
-*How to include the Fuzzy Clock in Conky?*
+How to include the Fuzzy Clock in Conky?
 In general, we use the following code to display the clock in conky:
 ${exec bash-fuzzy-clock}
 
@@ -62,7 +62,7 @@ In Terminal:
 ```
 conky -c ~/zeit.conf
 ```
-*RESULT:*
+RESULT:
 <img src="https://github.com/gerald-drissner/fuzzy-clock-german/blob/master/example_umgangssprachliche_uhr.png">
 
 On an Apple computer, you can use GeekTool to display the clock on your 
